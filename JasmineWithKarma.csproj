@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Authors>Luis Tepepa</Authors>
+    <Version>1.0.1</Version>
+    <Company></Company>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <Product />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\app\voting\voting.component.spec.ts" />
+    <None Remove="ClientApp\app\voting\voting.component.ts" />
+    <None Remove="ClientApp\app\voting\voting.module.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jasmine" Version="2.6.4" />
+    <PackageReference Include="KarmaGruntJSUnit.MSBuild" Version="1.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\voting\voting.component.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\app\voting\voting.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\voting\voting.module.ts" />
+  </ItemGroup>
+
+</Project>
